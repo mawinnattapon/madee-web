@@ -26,11 +26,11 @@
           class="project-card"
           @click="openProject(project)"
         >
-          <div class="project-image">
+          <!-- <div class="project-image">
             <div class="image-placeholder" :style="{ background: project.color }">
               <div class="project-icon" v-html="project.icon"></div>
             </div>
-          </div>
+          </div> -->
           <div class="project-content">
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
@@ -39,21 +39,21 @@
                 {{ tag }}
               </span>
             </div>
-            <div class="project-tech">
+            <!-- <div class="project-tech">
               <span v-for="tech in project.technologies" :key="tech" class="tech-tag">
                 {{ tech }}
               </span>
-            </div>
+            </div> -->
           </div>
           <div class="project-overlay">
             <div class="overlay-content">
               <h4>{{ project.title }}</h4>
               <p>{{ project.description }}</p>
-              <div class="project-tech">
+              <!-- <div class="project-tech">
                 <span v-for="tech in project.technologies" :key="tech" class="tech-tag">
                   {{ tech }}
                 </span>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -79,9 +79,9 @@ const activeFilter = ref('all')
 
 const filters = [
   { id: 'all', name: 'ทั้งหมด' },
-  { id: 'web', name: 'เว็บแอป' },
-  { id: 'mobile', name: 'แอปมือถือ' },
-  { id: 'custom', name: 'ซอฟต์แวร์เฉพาะ' }
+  // { id: 'web', name: 'เว็บแอป' },
+  // { id: 'mobile', name: 'แอปมือถือ' },
+  // { id: 'custom', name: 'ซอฟต์แวร์เฉพาะ' }
 ]
 
 const projects = ref([
@@ -96,10 +96,10 @@ const projects = ref([
   },
   {
     id: 2,
-    title: 'แพลตฟอร์มการเงินดิจิทัล',
-    description: 'ระบบบอทในแชทฯ สำหรับอำนวยความสะดวกในการทำธุรกรรม ประหยัดเวลา และรองรับการใช้งานจำนวนมาก',
+    title: 'แพลตฟอร์มจัดหางาน AI Job Matching',
+    description: 'ระบบจัดหางาน AI Job Matching สำหรับอำนวยความสะดวกในการทำธุรกรรม ประหยัดเวลา และรองรับการใช้งานจำนวนมาก',
     category: 'web',
-    tags: ['บอทในแชทฯ', 'สำคัญอำนวยความสะดวก', 'สำคัญ', 'การทำธุรกรรมกับลูกค้า'],
+    tags: ['จัดหางาน', 'AI Job Matching', 'สร้าง resume', 'ประกาศงาน'],
     technologies: ['React', 'Python', 'PostgreSQL', 'AI/ML'],
     image: '/api/placeholder/400/250'
   },
@@ -117,25 +117,25 @@ const projects = ref([
     title: 'ระบบบริหารจัดการบุคลากร',
     description: 'ระบบบริหารบุคลากรสำหรับมหาวิทยาลัย รองรับการจัดการข้อมูลอาจารย์ เจ้าหน้าที่ และการประเมินผลการปฏิบัติงาน',
     category: 'web',
-    tags: ['ข้อมูลบุคลากร', 'ใครสำรองข้อมูลกิจ', 'การประเมินผลการปฏิบัติงาน'],
+    tags: ['ข้อมูลบุคลากร', 'โครงสร้างองค์กร', 'การประเมินผลการปฏิบัติงาน', 'สวัสดิการ'],
     technologies: ['PHP', 'JavaScript', 'MySQL', 'CSS'],
     image: '/api/placeholder/400/250'
   },
   {
     id: 5,
-    title: 'ระบบจัดการสินทรัพย์ดิจิทัล',
-    description: 'ระบบจัดการสินทรัพย์ดิจิทัล ทะเบียนอุปกรณ์ไอที การติดตาม และการบำรุงรักษาระบบเครือข่าย',
+    title: 'ระบบเงินเดือน',
+    description: 'ระบบจัดการเงินเดือนสำหรับมหาวิทยาลัย รองรับการจัดการข้อมูลเงินเดือน ค่าจ้าง และการคำนวนเงินเดือน',
     category: 'web',
-    tags: ['ข้อมูลทรัพย์สิน', 'การติดตามครุภัณฑ์ไอที', 'ประวัติการซ่อม'],
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+    tags: ['ข้อมูลเงินเดือน', 'ค่าจ้าง', 'การคำนวนเงินเดือน', 'ภาษี'],
+    technologies: ['PHP', 'JavaScript', 'MySQL', 'CSS'],
     image: '/api/placeholder/400/250'
   },
   {
     id: 6,
-    title: 'แพลตฟอร์มบริหารจัดการองค์กร',
-    description: 'ระบบบริหารจัดการองค์กรแบบครบวงจร รวมการจัดการบุคลากร การเงิน และการดำเนินงานภายในองค์กร',
+    title: 'ระบบออกใบอนุญาตและแจ้งนำเข้า - ส่งออกระหว่างประเทศ',
+    description: 'ระบบออกใบอนุญาตและแจ้งนำเข้า - ส่งออกระหว่างประเทศ',
     category: 'web',
-    tags: ['ในแชทฯ', 'สำคัญอำนวยความสะดวก', 'วิน - สำคัญอำนวยความสะดวกการดำเนินการ'],
+    tags: ['ใบอนุญาต', 'แจ้งนำเข้า - ส่งออก', 'รับ - ส่งข้อมูลกับกรมศุลกากร', 'รายงานการนำเข้า - ส่งออก'],
     technologies: ['Vue.js', 'Laravel', 'MySQL', 'Redis'],
     image: '/api/placeholder/400/250'
   }

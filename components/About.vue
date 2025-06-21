@@ -19,7 +19,7 @@
             </p>
           </div>
           
-          <div class="stats-grid">
+          <!-- <div class="stats-grid">
             <div class="stat-item">
               <div class="stat-number">50+</div>
               <div class="stat-label">โปรเจกต์สำเร็จ</div>
@@ -36,7 +36,7 @@
               <div class="stat-number">24/7</div>
               <div class="stat-label">การสนับสนุน</div>
             </div>
-          </div>
+          </div> -->
         </div>
         
         <div class="about-visual">

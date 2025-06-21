@@ -152,7 +152,7 @@
         </div>
       </div>
       
-      <div class="contact-map">
+      <!-- <div class="contact-map">
         <div class="map-placeholder">
           <div class="map-content">
             <div class="map-icon">
@@ -165,7 +165,7 @@
             <span>123 ถนนเทคโนโลยี แขวงนวัตกรรม เขตดิจิทัล กรุงเทพฯ</span>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
